@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banana Ripeness Forecast</title>
+    <link rel="stylesheet" href="back.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="forecast-container">
+        <h1>🍌 Banana Ripeness Forecast</h1>
+        <p class="subtitle">Not now — future ripeness. Select your banana's current state.</p>
+        
+        <form id="ripeness-form">
+            <div class="options-container">
+                <div class="option">
+                    <input type="radio" id="green" name="ripeness" value="green" checked>
+                    <label for="green">
+                        <span class="emoji">🟢</span>
+                        <span>Green</span>
+                    </label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="yellow" name="ripeness" value="yellow">
+                    <label for="yellow">
+                        <span class="emoji">🟡</span>
+                        <span>Yellow</span>
+                    </label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="spotted" name="ripeness" value="spotted">
+                    <label for="spotted">
+                        <span class="emoji">斑</span>
+                        <span>Spotted</span>
+                    </label>
+                </div>
+            </div>
+            
+            <button type="submit">Get Forecast</button>
+        </form>
+        
+        <div id="result-container" class="hidden">
+            <p id="forecast-result"></p>
+        </div>
+    </main>
+
+    <script src="new.js"></script>
+</body>
+</html>

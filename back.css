@@ -1,0 +1,126 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFFBEB; 
+    color: #4A4A4A;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.forecast-container {
+    background-color: #FFFFFF;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    border: 1px solid #FDE68A;
+}
+
+h1 {
+    color: #333;
+    margin-top: 0;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+
+.options-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+
+.option input[type="radio"] {
+    display: none;
+}
+
+.option label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    width: 90px;
+    height: 90px;
+}
+
+.option .emoji {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.option label span {
+    margin-top: 8px;
+    font-weight: 600;
+}
+
+
+.option input[type="radio"]:checked + label {
+    border-color: #FBBF24; 
+    background-color: #FEF9C3; 
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(251, 191, 36, 0.3);
+}
+
+
+#ripeness-form button {
+    background-color: #FBBF24;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+}
+
+#ripeness-form button:hover {
+    background-color: #F59E0B;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+#result-container {
+    margin-top: 30px;
+    background-color: #F3F4F6;
+    padding: 20px;
+    border-radius: 12px;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#result-container.hidden {
+    opacity: 0;
+    transform: translateY(10px);
+    height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+#forecast-result {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1F2937;
+    margin: 0;
+}
